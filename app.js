@@ -127,7 +127,17 @@ function displayResults(r) {
 
   // Update Selling Price Display
   const ventaValEl = document.getElementById('resPrecioVentaVal');
-  ventaValEl.textContent = formatCLP(r.precioVentaFinal);
+  const ventaCardEl = document.getElementById('sellingPriceCard');
+  const markupAlertEl = document.getElementById('markupAlert');
+
+  if (r.markup > 0) {
+    ventaValEl.textContent = formatCLP(r.precioVentaFinal);
+    ventaCardEl.style.display = 'block';
+    markupAlertEl.style.display = 'none';
+  } else {
+    ventaCardEl.style.display = 'none';
+    markupAlertEl.style.display = 'flex';
+  }
 
   document.getElementById('resultsPanel').classList.add('visible');
 }

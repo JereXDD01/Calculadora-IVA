@@ -446,6 +446,21 @@ body {
   box-shadow: 0 4px 20px rgba(108, 99, 255, 0.1);
 }
 
+.markup-alert-card {
+  background: rgba(255, 212, 59, 0.08);
+  border: 1px dashed rgba(255, 212, 59, 0.4);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+  color: var(--warning);
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 .selling-label {
   font-size: 0.8rem;
   font-weight: 700;
